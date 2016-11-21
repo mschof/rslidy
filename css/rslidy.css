@@ -1,0 +1,468 @@
+﻿/* Settings applying to everything */
+html
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+/* Body */
+body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: -1;
+}
+
+/*
+-- overview/content separation
+*/
+
+/*
+-- Overview panel
+*/
+
+#overview
+{
+  width: 15em;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  list-style: none;
+  background-color: rgb(218,218,218);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  margin: 0 0 2em 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  word-wrap: break-word;
+}
+
+/* Items inside the canvas container (e.g. presentation slides) */
+.overview-item
+{
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+}
+
+/* Link on item */
+.overview-item a
+{
+  /*display: block;
+  margin-bottom: 2em;
+  font-size: 1.2em;
+  text-decoration: none;*/
+}
+
+/* Hover on link */
+.overview-item a:hover
+{
+  
+}
+
+.slide-thumbnail
+{
+  display: block;
+  /* overflow: hidden; causes click events not being fired on firefox (which is kinda ironic) */
+  overflow: hidden;
+}
+
+.slide-thumbnail:hover
+{
+  background-color: rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.slide-clickelement
+{
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slide-link
+{
+  z-index: 1;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin-bottom: 0.2em;
+  text-decoration: underline;
+  color: rgb(0,0,255);
+}
+
+.slide-selected
+{
+  background-color: rgba(255,255,255,0.5);
+}
+
+.thumbnail-caption
+{
+  font-size: 0.7em;
+  text-align: center;
+  background-color: rgb(200,200,200);
+  
+  /* Separating border */
+  border-bottom: 2px solid gray;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+
+/*
+-- Content section
+*/
+
+#content-section
+{
+  height: calc(100% - 2em);
+  width: auto;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: left 0.2s;
+  display: block;
+  margin-bottom: 2em;
+  overflow-x: hidden;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  word-wrap: break-word;
+}
+
+#content-section .slide
+{
+  font-size: 1em;
+}
+
+.shifted
+{
+  left: 15em !important;
+}
+
+/* Main content area */
+#content
+{
+  padding: 5em 1em 0 1em;
+  text-align: center;
+}
+
+/* Wrapper */
+#new-body
+{
+  height: 100%;
+  width: 100%;
+}
+
+/*
+-- Speaker Notes
+*/
+#speakernotes-overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+.speakernotes-container
+{
+  color: white;
+  word-wrap: break-word;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.speakernotes
+{
+  display: none !important;
+}
+
+/*
+-- Status bar
+*/
+#status-bar
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2em;
+  background-color: rgb(200,200,200);
+  display: table;
+  z-index: 1;
+  opacity: 0.5;
+  /*transition: opacity 0.2s ease;*/
+  overflow: hidden;
+}
+
+#status-bar:hover
+{
+  opacity: 0.8;
+}
+
+#status-bar-content
+{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#status-bar-button-nav
+{
+  display: inline-block;
+  margin-top: 0px !important;
+}
+
+#status-bar-nav-link-previous
+{
+  margin-right: 3em;
+}
+
+#status-bar-content input
+{
+  margin-bottom: 1px;
+}
+
+#status-bar-content div
+{
+  margin-top: 2px;
+}
+
+.status-bar-item
+{
+  float: left;
+  margin-left: 2px;
+  display: block;
+}
+
+#timer
+{
+  float: right;
+  margin-right: 2px;
+  padding-right: 2px;
+  border-right: 2px solid black;
+  cursor: pointer;
+}
+
+#slide-input-container
+{
+  float: right;
+}
+
+#slide-input
+{
+  width: 2em;
+  text-align: center;
+  border: 0px;
+  outline: 0;
+}
+
+#slide-caption
+{
+  float: right;
+  color: rgb(255,0,0);
+  opacity: 1.0 !important;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+#button-menu
+{
+  float: right;
+  margin-right: 2px;
+}
+
+/*
+-- Menu
+*/
+#menu
+{
+  position: fixed;
+  font-size: 1.5em;
+  bottom: calc(2.0em / 1.5);
+  right: 0;
+  width: auto;
+  height: auto;
+  background-color: rgb(200,200,200);
+  padding: 2px;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  z-index: 1;
+}
+
+.menu-content
+{
+  text-align: right;
+}
+
+/*
+-- Common modifiers
+*/
+.hidden
+{
+  display: none !important;
+}
+
+.invisible
+{
+  visibility: hidden;
+}
+
+.noselect
+{
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/*
+-- SVG fix
+*/
+.svg-replacement
+{
+  pointer-events: none;
+}
+
+.svg-link
+{
+  display: inline-block;
+}
+
+/*
+-- Colors
+*/
+.color-invert
+{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+
+/* Styles for larger screens only */
+@media only screen 
+and (min-width: 800px)
+{
+  /*
+  -- Common modifiers
+  */
+  .hidden-on-desktop
+  {
+    display: none;
+  }
+
+}
+
+/* Styles for smaller screens only */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 799px)
+{
+  /*
+  -- Viewport settings
+  */
+  @viewport
+  {
+    /* placeholder */
+  }
+
+  /*
+  -- Common modifiers
+  */
+  .hidden-on-mobile
+  {
+    display: none !important;
+  }
+
+  /*
+  -- Elements
+  */
+  #status-bar
+  {
+    font-size: 0.8em !important;
+    height: calc(2.0em / 0.8) !important;
+  }
+
+}
+
+/* Orientation portrait override */
+@media only screen
+and (orientation: portrait)
+{
+  #content-section
+  {
+    position: relative !important;
+  }
+}
+
+/* Print styles */
+@media print
+{
+
+  body
+  {
+    color: black;
+    background-color: white;
+    font: normal small Verdana, sans-serif;
+  }
+
+  /* Hide basic controls */
+  #overview, #status-bar, #menu
+  {
+    display: none;
+  }
+
+  .slide
+  {
+    display: block !important;
+    page-break-after: auto;
+    page-break-inside: avoid; /* Do not break the page in the middle of a slide */
+  }
+
+  .titleslide
+  {
+    page-break-after: always;
+    page-break-inside: avoid; /* Do not break the page in the middle of a slide */
+  }
+
+  /* Display whole content now */
+  html, body, #content-section
+  {
+    overflow: visible !important;
+  }
+
+  /* In case the user had the overview panel open */
+  .shifted
+  {
+    left: 0em !important;
+  }
+
+  /* In case the user had the low light mode activated */
+  .color-invert
+  {
+    filter: invert(0%) !important;
+    -webkit-filter: invert(0%) !important;
+  }
+
+}

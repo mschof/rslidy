@@ -1,0 +1,242 @@
+
+body {
+  color: black;
+  background-color: #f9f9f9;
+  font: normal medium Verdana, sans-serif;
+  /* allow words to be broken at hyphenation points */
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+
+/* turn hyphens off for code, tt, and kbd */
+
+code, var, kbd, samp, listing, plaintext, xmp, abbr {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+}
+
+em { font-style: italic; }
+
+img { border: none; }
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 0 0 0.7em 0;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 0 0 0.6em 0;
+}
+
+h3 {
+  font-size: 1.1em;
+  margin: 0 0 0.55em 0;
+}
+
+h4 {
+  font-size: 1.0em;
+  margin: 0 0 0.5em 0;
+}
+
+h5 {
+  font-size: 1.0em;
+  margin: 0 0 0.5em 0;
+}
+
+h6 {
+  font-size: 1.0em;
+  margin: 0 0 0.5em 0;
+}
+
+
+
+p {
+  margin: 0 0 1em 0;
+  text-align: justify;
+}
+
+/* indent first line of para 2..n in text passage */
+
+div.textpassage p + p {
+  text-indent: 1em;
+}
+
+
+blockquote {
+  margin: 0 2em 1em 2em;
+}
+
+
+
+
+ol, ul {
+  margin-bottom: 1em;
+}
+
+
+ol {
+  list-style: inside decimal;
+}
+
+ul ul ol ol, ul ol ul ol, ol ul ol ol, ol ol ul ol, ol ul ol, ol ol {
+  list-style: inside lower-alpha;
+}
+
+ol ul ol ol, ol ol ul ol, ul ol ol ol, ol ol ol {
+  list-style: inside lower-roman;
+}
+
+ol ol ol ol {
+  list-style: inside decimal;
+}
+
+
+
+ul {
+  list-style: inside disc;
+}
+
+ul ul, ol ol ul ul, ol ul ol ul, ul ol ol ul, ol ul ul, ul ol ul {
+  list-style: inside circle;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+ol ul ul ul, ul ol ul ul, ul ul ol ul, ul ul ul {
+  list-style: inside square;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+ul ul ul ul {
+  list-style: inside disc;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+  padding-bottom: 0.5em;
+}
+
+
+pre {
+  font-size: 0.8em;
+  margin-bottom: 2em;
+  font-family: monospace;
+}
+
+/*
+-- Night mode customization
+*/
+h1.night-mode, h2.night-mode, h3.night-mode
+{
+  color: white; /* Text color */
+}
+
+p.night-mode
+{
+  color: white; /* Text color */
+}
+
+span.night-mode
+{
+  color: white; /* Text color */
+}
+
+li.night-mode
+{
+  color: white; /* Text color */
+}
+
+ul.night-mode
+{
+  color: white; /* Text color */
+}
+
+ol.night-mode
+{
+  color: white; /* Text color */
+}
+
+pre.night-mode
+{
+  color: white; /* Text color */
+}
+
+a.night-mode
+{
+  color: yellow; /* Text color */
+}
+
+
+/*
+-- Slide styles
+*/
+.slide
+{
+  padding: 2em;
+}
+
+.titleslide
+{
+    text-align: center;
+}
+.titleslide h1
+{
+    padding-top: 0.5em;
+    font-size: 1.6em;
+    margin-bottom: 1.4em;
+}
+..titleslide h2
+{
+    font-size: 1.2em;
+    margin-bottom: 1.4em;
+}
+..titleslide h3
+{
+    font-size: 1em;
+    margin-bottom: 1.2em;
+}
+..titleslide p
+{
+    padding: 0.5em 0;
+}
+
+div.slide p.location {
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  background-color: #eee;
+  padding: 0 1ex 0 1ex;
+  text-align: right;
+  font-size: 60%;
+}
+
+
+
+span.isbn:before {
+  content: "ISBN";
+  font-size: 80%;
+}
+
+
+
+div.slide img.svg, div.slide object.svg, div.slide embed.svg {
+  max-width: 100%;
+  max-height: 20em;
+}
