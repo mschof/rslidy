@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+
+<!-- for css3 media queries to work properly on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>rslidy - Responsive presentation slides in HTML5, CSS3, and JS.</title>
+
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/normalise.css"/>
+<link rel="stylesheet" href="css/rslidy.css" />
+<link rel="stylesheet" href="css/slides-default.css"/>
+
+<script src="js/rslidy.js"></script>
+
+</head>
+
+<body>
+
+<div class="slide titleslide">
+<h1>rslidy</h1>
+
+<h2>Responsive presentation slides in HTML5, CSS3, and JS.</h2>
+
+<p>
+Web site:<br/>
+<a href="http://www.example.com">
+<code>http://www.example.com</code>
+</a>
+<br/>
+<br/>
+Slides:<br/>
+<a href="http://www.example.com/slides">
+<code>http://www.example.com/slides</code>
+</a>
+</p>
+
+
+<div class="footer">
+<p id="location">
+Sat 01 Jan 2016, some city.
+</p>
+</div>
+
+
+</div>
+
+
+
+<div class="slide">
+<h1>Nested lists</h1>
+
+<p>
+Nested lists are supported.
+</p>
+
+<p>
+They reveal one at time be navigating and adding the class "incremental" to the HTML list element.
+</p>
+<ul class="incremental">
+<li>Item1</li>
+<li>Item2</li>
+<li>Item3</li>
+<li>1st level nested incremental items:
+  <ul class="incremental">
+    <li>2nd level nested incremental items:
+      <ul class="incremental">
+        <li>test1</li>
+        <li>test2</li>
+        <li>test3</li>
+      </ul>
+    </li>
+    <li>test2</li>
+    <li>test3</li>
+  </ul>
+</li>
+<li>Item4</li>
+<li>Item5</li>
+</ul>
+
+</div>
+
+
+<div class="slide">
+<h1>Responsiveness</h1>
+
+<ul class="incremental">
+<li><span class="li-intro">Screen size</span>:
+rslidy works flawlessly on all common screen resolutions
+</li>
+
+<li><span class="li-intro">Mobile phone</span>:
+small screens and portrait mode (e.g. mobile phones) are also supported
+</li>
+</ul>
+
+</div>
+
+
+</body>
+</html>
