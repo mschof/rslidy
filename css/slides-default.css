@@ -217,6 +217,11 @@ a.night-mode
     padding: 0.5em 0;
 }
 
+/*
+Keith Andrews: extra CSS for rslidy slides
+*/
+
+
 div.slide p.location {
   position: absolute;
   bottom: 1em;
